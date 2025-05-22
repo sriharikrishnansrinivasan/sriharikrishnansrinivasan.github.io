@@ -156,6 +156,116 @@
             color: transparent;
         }
         
+        /* About Section */
+        .about-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .skills {
+            margin-top: 3rem;
+        }
+
+        .skills h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .skill-category ul {
+            list-style-type: none;
+        }
+
+        .skill-category li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .skill-category li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        .timeline {
+            margin-top: 3rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: var(--gradient);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .timeline-date:before {
+            content: '';
+            position: absolute;
+            left: -2.3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--secondary);
+            border: 2px solid var(--primary);
+        }
+
+        .timeline-content {
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .timeline-content h4 {
+            margin-top: 0;
+            color: white;
+        }
+
         /* Projects Grid */
         .projects-grid {
             display: grid;
@@ -248,11 +358,68 @@
             text-decoration: underline;
         }
         
+        /* Contact Section */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 5px;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Form submission message */
+        .form-message {
+            margin-top: 2rem;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            display: none;
+        }
+
+        .form-message.success {
+            background: rgba(0, 255, 0, 0.1);
+            border: 1px solid rgba(0, 255, 0, 0.3);
+            color: #00ff00;
+            display: block;
+        }
+
+        .form-message.error {
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            color: #ff6b6b;
+            display: block;
+        }
+        
         /* Responsive */
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
             .nav-links { display: none; }
             .projects-grid { grid-template-columns: 1fr; }
+            .about-content { flex-direction: column; }
+            .skills-grid { grid-template-columns: 1fr; }
             
             .project-img-container {
                 height: 400px;
@@ -285,6 +452,78 @@
         <div class="cta-buttons">
             <a href="#projects" class="btn btn-primary">View Work</a>
             <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hi, I'm Srihari Krishnan - a creative developer and hardware designer specializing in IoT automation solutions.</p>
+                <p>With expertise in both software and hardware, I bridge the gap between digital and physical systems to create innovative, connected solutions.</p>
+                <p>My passion lies in designing smart systems that leverage NFC/RFID, sensor networks, and automation to solve real-world problems.</p>
+                
+                <div class="skills">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Hardware</h4>
+                            <ul>
+                                <li>Circuit Design</li>
+                                <li>PCB Layout</li>
+                                <li>Embedded Systems</li>
+                                <li>Sensor Networks</li>
+                                <li>Prototyping</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Software</h4>
+                            <ul>
+                                <li>IoT Platforms</li>
+                                <li>Automation Scripts</li>
+                                <li>Web Development</li>
+                                <li>Data Visualization</li>
+                                <li>Cloud Integration</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Technologies</h4>
+                            <ul>
+                                <li>NFC/RFID</li>
+                                <li>Wireless Protocols</li>
+                                <li>Cloud Integration</li>
+                                <li>Machine Learning</li>
+                                <li>3D Printing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline">
+                    <h3>Experience & Education</h3>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022 - Present</div>
+                        <div class="timeline-content">
+                            <h4>IoT Solutions Developer</h4>
+                            <p>Designing and implementing custom IoT automation systems for various industries.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020 - 2022</div>
+                        <div class="timeline-content">
+                            <h4>Hardware Design Engineer</h4>
+                            <p>Developed PCB designs and embedded systems for industrial applications.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2016 - 2020</div>
+                        <div class="timeline-content">
+                            <h4>B.Tech in Electronics Engineering</h4>
+                            <p>Specialized in embedded systems and IoT technologies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     
@@ -340,7 +579,30 @@
     
     <section id="contact">
         <h2>Get In Touch</h2>
-        <!-- Add your contact form or information here -->
+        <div class="contact-form">
+            <!-- Replace your-email@example.com with your actual email -->
+            <form action="https://formsubmit.co/srihari2909@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New message from portfolio!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://yourportfolio.com/thank-you.html">
+                <input type="hidden" name="_template" value="box">
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            <div id="form-message" class="form-message"></div>
+        </div>
     </section>
     
     <script>
@@ -362,6 +624,28 @@
                 });
             });
         });
+
+        // Handle form submission feedback
+        const form = document.querySelector('form');
+        const formMessage = document.getElementById('form-message');
+        
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                // Optional: Add client-side validation here
+                formMessage.style.display = 'none';
+            });
+        }
+
+        // Check URL for success parameter (for FormSubmit redirect)
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('success')) {
+            formMessage.textContent = 'Thank you! Your message has been sent successfully.';
+            formMessage.classList.add('success');
+            formMessage.style.display = 'block';
+            
+            // Clear the URL parameters
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
     </script>
 </body>
 </html>
