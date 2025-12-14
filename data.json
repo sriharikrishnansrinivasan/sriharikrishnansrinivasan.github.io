@@ -1,0 +1,267 @@
+{
+  "personal": {
+    "name": "Srihari Krishnan Srinivasan",
+    "title": "IoT Developer & Electrical Technician",
+    "email": "srihari2909@gmail.com",
+    "portfolio": "https://sriharikrishnansrinivasan.github.io/",
+    "linkedin": "https://www.linkedin.com/in/srihari-krishnan-178372247/",
+    "github": "https://github.com/sriharikrishnansrinivasan",
+    "location": "Chennai, Tamil Nadu, India",
+    "status": "Student & Vice President",
+    "summary": "Reliable Technician with solid foundation in identifying electrical problems and measuring current flow. Performs tests to determine power and performance. Dedicated to resolving issues and integrating smooth operations. Currently serving as Vice President at Crescent Innovation and Startup Club and passionate about IoT solutions, renewable energy systems, and innovative electrical applications.",
+    "current_cgpa": "9.2+",
+    "expected_graduation": "Expected 01/2027"
+  },
+  "experience": [
+    {
+      "id": 1,
+      "position": "Vice President",
+      "company": "Crescent Innovation and Startup Club",
+      "location": "Chennai, Tamil Nadu, India",
+      "period": "Jul 2025 - Present · 6 mos",
+      "type": "Leadership",
+      "employment_type": "Full-time",
+      "work_mode": "On-site",
+      "current": true,
+      "description": [
+        "Leading innovation initiatives and startup development at the university level",
+        "Fostering entrepreneurship and technological innovation among students"
+      ],
+      "skills": ["Leadership", "Innovation", "Startup Ecosystem", "Team Management"]
+    },
+    {
+      "id": 2,
+      "position": "Chief Executive Officer",
+      "company": "Velsy Media",
+      "location": "Chennai, Tamil Nadu, India",
+      "period": "Jan 2024 - Present · 2 yrs",
+      "type": "Leadership",
+      "employment_type": "Full-time",
+      "work_mode": "On-site",
+      "current": true,
+      "description": [
+        "Leading strategic direction, operations, and growth initiatives for a media company",
+        "Focused on innovative content creation and digital solutions"
+      ],
+      "skills": ["Entrepreneurship", "Strategy", "Business Development", "Media Management"]
+    },
+    {
+      "id": 3,
+      "position": "Sales Intern",
+      "company": "QodeNext",
+      "location": "Chennai, Tamil Nadu, India",
+      "period": "Jun 2025 - Aug 2025 · 3 mos",
+      "type": "Internship",
+      "employment_type": "Internship",
+      "work_mode": "On-site",
+      "current": false,
+      "description": [
+        "Spearheaded development of IoT-enabled computer vision solutions for AI-driven retail planogram",
+        "Contributed to smart automation projects (automated checkout, real-time shelf monitoring)",
+        "Collaborated with software/hardware teams to deploy intelligent systems",
+        "Utilized machine learning models and sensor networks for inventory management"
+      ],
+      "skills": ["IoT", "Computer Vision", "Retail Automation", "Machine Learning", "Sales Engineering"]
+    },
+    {
+      "id": 4,
+      "position": "IoT Intern",
+      "company": "RineX.Ai",
+      "location": "Chennai, Tamil Nadu, India",
+      "period": "Sep 2024 - Oct 2024 · 2 mos",
+      "type": "Internship",
+      "employment_type": "Internship",
+      "work_mode": "Remote",
+      "current": false,
+      "description": [
+        "Assisted in developing and prototyping IoT-based solutions",
+        "Hands-on involvement in device integration, data collection, and performance analysis",
+        "Collaborated with project teams to create and test real-world applications for smart systems"
+      ],
+      "skills": ["IoT Development", "Prototyping", "Device Integration", "Data Analysis"]
+    },
+    {
+      "id": 5,
+      "position": "Electrical Technician",
+      "company": "Firefly Battery Charger",
+      "location": "Saidapet, Chennai, India",
+      "period": "Jun 2024 - Jul 2024 · 2 mos",
+      "type": "Technical",
+      "employment_type": "Full-time",
+      "work_mode": "On-site",
+      "current": false,
+      "description": [
+        "Adapted quickly to new laboratory techniques for various electrical testing projects",
+        "Managed inventory for uninterrupted laboratory operations"
+      ],
+      "skills": ["Electrical Testing", "Laboratory Management", "Inventory Management", "Technical Operations"]
+    },
+    {
+      "id": 6,
+      "position": "Research Scholar",
+      "company": "National Space Society",
+      "location": "Washington, United States",
+      "period": "Apr 2019 - May 2023 · 4 yrs 2 mos",
+      "type": "Research",
+      "employment_type": "Research",
+      "work_mode": "On-site",
+      "current": false,
+      "description": [
+        "Conducted research in space technology and related scientific domains",
+        "Contributed to research papers and scientific publications",
+        "Participated in space research initiatives and collaborative projects"
+      ],
+      "skills": ["Research Methodology", "Space Technology", "Scientific Writing", "Project Collaboration"]
+    }
+  ],
+  "projects": [
+    {
+      "category": "Energy Systems",
+      "title": "Solar Power Inverter Design",
+      "description": "Designed and built efficient solar power conversion system",
+      "status": "Completed"
+    },
+    {
+      "category": "Energy Systems",
+      "title": "Solar Power Aquaponics Setup",
+      "description": "Integrated renewable energy with sustainable agriculture system",
+      "status": "Completed"
+    },
+    {
+      "category": "Energy Systems",
+      "title": "Battery Charger Systems",
+      "description": "Worked on commercial battery charger technology",
+      "status": "Completed"
+    },
+    {
+      "category": "Smart Automation",
+      "title": "Home Automation System",
+      "description": "Developed complete smart home control and monitoring system",
+      "status": "In Progress"
+    },
+    {
+      "category": "Smart Automation",
+      "title": "Wireless Communication using Nordic RF24L01",
+      "description": "Implemented wireless communication system for device connectivity",
+      "status": "Completed"
+    },
+    {
+      "category": "Smart Automation",
+      "title": "IoT-Based Monitoring Systems",
+      "description": "Created remote monitoring solutions for various applications",
+      "status": "Completed"
+    },
+    {
+      "category": "Sustainability Solutions",
+      "title": "RO Waste Water Filtering",
+      "description": "Designed system to recycle and filter RO waste water",
+      "status": "Completed"
+    },
+    {
+      "category": "Sustainability Solutions",
+      "title": "Water Conservation Systems",
+      "description": "Developed efficient water management solutions",
+      "status": "Completed"
+    },
+    {
+      "category": "Sustainability Solutions",
+      "title": "Energy Efficient Designs",
+      "description": "Created optimized systems for minimal power consumption",
+      "status": "Completed"
+    }
+  ],
+  "skills": {
+    "electrical": {
+      "category": "Electrical Systems",
+      "proficiency": "Expert",
+      "skills": [
+        "Electrical Problem Identification",
+        "Current Flow Measurement",
+        "Power & Performance Testing",
+        "Circuit Analysis & Troubleshooting",
+        "Battery Systems & Chargers"
+      ]
+    },
+    "iot": {
+      "category": "IoT & Embedded Systems",
+      "proficiency": "Advanced",
+      "skills": [
+        "IoT Device Integration",
+        "Sensor Data Collection & Analysis",
+        "Nordic RF24L01 Wireless Communication",
+        "Home Automation Systems",
+        "Prototype Development"
+      ]
+    },
+    "renewable_energy": {
+      "category": "Renewable Energy",
+      "proficiency": "Intermediate",
+      "skills": [
+        "Solar Power Inverters",
+        "Aquaponics System Design",
+        "Power Management",
+        "RO Water Filtration Systems",
+        "Sustainable Energy Solutions"
+      ]
+    },
+    "additional": {
+      "category": "Additional Skills",
+      "skills": [
+        "PCB Design",
+        "Computer Vision",
+        "Data Analysis",
+        "Inventory Management",
+        "Research Methodology"
+      ]
+    }
+  },
+  "education": [
+    {
+      "degree": "Bachelor of Technology",
+      "institution": "BSA Crescent Institute of Science and Technology",
+      "period": "Expected 01/2027",
+      "details": "Specializing in Electrical and IoT technologies with focus on practical applications",
+      "cgpa": "9.2+"
+    },
+    {
+      "degree": "Senior Secondary School",
+      "institution": "Sri Chaitanya Senior Secondary School",
+      "period": "01/2023",
+      "details": "Chennai, Tamil Nadu, India. Strong foundation in science and mathematics",
+      "stream": "Science & Mathematics"
+    },
+    {
+      "degree": "Secondary School",
+      "institution": "Sri Chaitanya Secondary School",
+      "period": "",
+      "details": "Chennai, Tamil Nadu, India. Early development of interest in technical subjects",
+      "stream": "Science & Technology"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Internet of Things & Robotics",
+      "issuer": "RINEX",
+      "year": "2024",
+      "details": "Comprehensive training in IoT systems, robotics integration, embedded programming, and sensor networks"
+    },
+    {
+      "name": "PCB Design & Fabrication",
+      "issuer": "UDEMY",
+      "year": "",
+      "details": "Complete training in designing custom printed circuit boards, schematic design, and layout optimization"
+    },
+    {
+      "name": "Internship Completion Certificate",
+      "issuer": "RineX.Ai",
+      "year": "2024",
+      "details": "Successfully completed IoT internship with hands-on experience in device integration"
+    }
+  ],
+  "metadata": {
+    "last_updated": "2024-12-12",
+    "data_source": "LinkedIn + Previous Portfolio",
+    "profile_url": "https://www.linkedin.com/in/srihari-krishnan-178372247/",
+    "version": "4.0"
+  }
+}
