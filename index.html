@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srihari Krishnan Srinivasan | IoT Developer & Electrical Technician</title>
+    <meta name="description" content="Vice President at Crescent Innovation and Startup Club, IoT Developer with expertise in electrical systems, solar power, home automation, and smart retail solutions.">
+    <meta name="keywords" content="IoT Developer, Electrical Technician, Solar Power, Home Automation, Computer Vision, Startup Founder">
+    <meta name="author" content="Srihari Krishnan Srinivasan">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00d9ff',
+                        dark: '#0a0a0a',
+                        light: '#f0f0f0',
+                        gray: {
+                            800: '#1f2937',
+                            900: '#111827'
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'shimmer': 'shimmer 3s infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'float': 'float 6s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        shimmer: {
+                            '0%': { transform: 'translateX(-100%)' },
+                            '100%': { transform: 'translateX(100%)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        :root {
+            --primary-color: #00d9ff;
+            --dark-bg: #0a0a0a;
+            --light-text: #f0f0f0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 217, 255, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(0, 217, 255, 0.05) 0%, transparent 20%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #00d9ff 20%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #00d9ff;
+            box-shadow: 0 0 15px rgba(0, 217, 255, 0.5);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 217, 255, 0.15);
+        }
+        
+        .scroll-indicator {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .scroll-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .scroll-dot.active {
+            background: #00d9ff;
+            transform: scale(1.5);
+            box-shadow: 0 0 15px rgba(0, 217, 255, 0.5);
+        }
+        
+        .experience-card {
+            background: linear-gradient(145deg, rgba(0, 217, 255, 0.05), rgba(0, 217, 255, 0.02));
+            border: 1px solid rgba(0, 217, 255, 0.1);
+            border-left: 4px solid #00d9ff;
+            transition: all 0.3s ease;
+        }
+        
+        .experience-card:hover {
+            background: linear-gradient(145deg, rgba(0, 217, 255, 0.08), rgba(0, 217, 255, 0.03));
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 217, 255, 0.2);
+        }
+        
+        .skill-tag {
+            background: rgba(0, 217, 255, 0.1);
+            color: #00d9ff;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-tag:hover {
+            background: rgba(0, 217, 255, 0.2);
+            transform: scale(1.05);
+        }
+        
+        .current-role {
+            border-left: 4px solid #10b981;
+        }
+        
+        .internship-role {
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .leadership-role {
+            border-left: 4px solid #8b5cf6;
+        }
+        
+        .research-role {
+            border-left: 4px solid #ec4899;
+        }
+        
+        .profile-image {
+            width: 8000x;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 3px solid rgba(0, 217, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 217, 255, 0.2);
+        }
+        
+        .profile-image-container {
+            position: relative;
+        }
+        
+        .profile-image-container::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: -20px;
+            bottom: -20px;
+            border: 2px solid rgba(0, 217, 255, 0.1);
+            border-radius: 25px;
+            z-index: -1;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-image {
+                width: 220px;
+                height: 268px;
+            }
+            
+            .profile-image-container::before {
+                top: 10px;
+                left: 10px;
+                right: -10px;
+                bottom: -10px;
+            }
+        }
+        
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator no-print">
+        <div class="scroll-dot active" data-section="hero"></div>
+        <div class="scroll-dot" data-section="about"></div>
+        <div class="scroll-dot" data-section="experience"></div>
+        <div class="scroll-dot" data-section="skills"></div>
+        <div class="scroll-dot" data-section="projects"></div>
+        <div class="scroll-dot" data-section="education"></div>
+        <div class="scroll-dot" data-section="certifications"></div>
+        <div class="scroll-dot" data-section="contact"></div>
+    </div>
+    
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="no-print fixed top-6 right-6 z-50 p-3 rounded-full bg-gray-800 text-white hover:bg-gray-700 transition-all shadow-lg">
+        <i class="fas fa-moon" id="theme-icon"></i>
+    </button>
+
+    <!-- Hero Section with Photo -->
+    <section id="hero" class="min-h-screen flex items-center relative overflow-hidden pt-16">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-10 rounded-full blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 md:px-8 py-12 md:py-20 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                <!-- Left Content -->
+                <div class="lg:w-2/3 animate-fade-in">
+                    <span class="text-primary font-semibold tracking-widest uppercase text-sm md:text-base">HELLO, I'M</span>
+                    
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mt-4 mb-6 gradient-text animate-slide-up">
+                        Srihari Krishnan Srinivasan
+                    </h1>
+                    
+                    <h2 class="text-xl md:text-3xl font-semibold text-gray-300 mb-8 animate-slide-up" style="animation-delay: 0.2s">
+                        IoT Developer & Electrical Technician
+                    </h2>
+                    
+                    <div class="bg-gray-900/50 backdrop-blur-sm border-l-4 border-primary rounded-lg p-6 mb-10 animate-slide-up" style="animation-delay: 0.4s">
+                        <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+                            <span class="text-primary font-semibold">Reliable Technician</span> with solid foundation in identifying electrical problems and measuring current flow. 
+                            Performs tests to determine power and performance. Dedicated to resolving issues and integrating smooth operations. 
+                            Currently serving as <span class="text-primary font-semibold">Vice President</span> at Crescent Innovation and Startup Club and passionate about 
+                            IoT solutions, renewable energy systems, and innovative electrical applications.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4 animate-slide-up" style="animation-delay: 0.6s">
+                        <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-primary border-2 border-primary rounded-full font-semibold hover:bg-primary hover:text-black transition-all duration-300">
+                            <i class="fas fa-envelope"></i> Contact Me
+                        </a>
+                        <a href="#projects" class="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-white border-2 border-gray-600 rounded-full font-semibold hover:bg-gray-700 transition-all duration-300">
+                            <i class="fas fa-code"></i> View Projects
+                        </a>
+                        <button id="download-resume" class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-black rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300">
+                            <i class="fas fa-download"></i> Download Resume
+                        </button>
+                    </div>
+                    
+                    <!-- Quick Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 animate-slide-up" style="animation-delay: 0.8s">
+                        <div class="text-center p-4 bg-gray-900/30 rounded-lg">
+                            <div class="text-2xl md:text-3xl font-bold text-primary">6+</div>
+                            <div class="text-sm text-gray-400">Professional Roles</div>
+                        </div>
+                        <div class="text-center p-4 bg-gray-900/30 rounded-lg">
+                            <div class="text-2xl md:text-3xl font-bold text-primary">10+</div>
+                            <div class="text-sm text-gray-400">Projects Completed</div>
+                        </div>
+                        <div class="text-center p-4 bg-gray-900/30 rounded-lg">
+                            <div class="text-2xl md:text-3xl font-bold text-primary">5+</div>
+                            <div class="text-sm text-gray-400">Technical Skills</div>
+                        </div>
+                        <div class="text-center p-4 bg-gray-900/30 rounded-lg">
+                            <div class="text-2xl md:text-3xl font-bold text-primary">5+</div>
+                            <div class="text-sm text-gray-400">hardware Worked with </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Photo -->
+                <div class="lg:w-1/3 flex justify-center animate-slide-up" style="animation-delay: 0.3s">
+                    <div class="profile-image-container animate-float">
+                        <img 
+                            src="1.JPG" 
+                            alt="Srihari Krishnan Srinivasan - IoT Developer & Electrical Technician"
+                            class="profile-image"
+                            onerror="this.onerror=null; this.src='https://via.placeholder.com/300x365/0a0a0a/00d9ff?text=Srihari+Krishnan'"
+                        />
+                        <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center border border-primary/30 backdrop-blur-sm">
+                            <i class="fas fa-microchip text-primary text-xl"></i>
+                        </div>
+                        <div class="absolute -top-4 -left-4 w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center border border-primary/30 backdrop-blur-sm">
+                            <i class="fas fa-bolt text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 section-title">About Me</h2>
+                <p class="text-xl text-gray-400 mb-12 max-w-3xl">
+                    Dedicated Electrical Technician and IoT Developer with hands-on experience in electrical systems, IoT solutions, and renewable energy projects.
+                </p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="animate-slide-up">
+                        <h3 class="text-2xl font-bold mb-6 text-primary">Professional Profile</h3>
+                        <div class="space-y-6">
+                            <p class="text-gray-300 leading-relaxed">
+                                I am a reliable and detail-oriented professional with a solid foundation in identifying electrical problems and measuring current flow. My expertise includes performing tests to determine power and performance, with a dedication to resolving issues and integrating smooth operations.
+                            </p>
+                            <p class="text-gray-300 leading-relaxed">
+                                Currently pursuing my B.Tech at BSA Crescent Institute of Science and Technology, I combine academic knowledge with practical experience gained through internships and personal projects. My passion lies in IoT development, renewable energy systems, and innovative electrical applications.
+                            </p>
+                            <div class="pt-6 border-t border-gray-800">
+                                <h4 class="text-xl font-semibold mb-4">Core Competencies</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Electrical Troubleshooting</span>
+                                    <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">IoT Development</span>
+                                    <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Solar Power Systems</span>
+                                    <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Home Automation</span>
+                                    <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">PCB Design</span>
+                                    <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">MATLAB</span>
+                                    <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"> Simulink</span>
+                                    <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"> Computer Vision</span>
+                                    <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">AI Tools</span>
+                                    <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"> Frontend Web Development</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="animate-slide-up" style="animation-delay: 0.2s">
+                        <h3 class="text-2xl font-bold mb-6 text-primary">Personal Details</h3>
+                        <div class="bg-gray-900/50 rounded-xl p-6">
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="w-10">
+                                        <i class="fas fa-user text-primary text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-300">Full Name</h4>
+                                        <p class="text-gray-400">Srihari Krishnan Srinivasan</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-10">
+                                        <i class="fas fa-graduation-cap text-primary text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-300">Education</h4>
+                                        <p class="text-gray-400">B.Tech (Expected 2027)</p>
+                                        <p class="text-sm text-gray-500">BSA Crescent Institute of Science and Technology</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-10">
+                                        <i class="fas fa-map-marker-alt text-primary text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-300">Location</h4>
+                                        <p class="text-gray-400">Chennai, Tamil Nadu, India</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-10">
+                                        <i class="fas fa-briefcase text-primary text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-300">Current Status</h4>
+                                        <p class="text-gray-400">Student & Vice President</p>
+                                        <p class="text-sm text-gray-500">Available for internships and projects</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-10">
+                                        <i class="fas fa-globe text-primary text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-300">Project Portfolio</h4>
+                                        <a href="https://sriharikrishnansrinivasan.github.io/" class="text-primary hover:underline" target="_blank">
+                                            sriharikrishnansrinivasan.github.io
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-10">
+                                        <i class="fas fa-envelope text-primary text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-300">Email</h4>
+                                        <a href="mailto:srihari2909@gmail.com" class="text-primary hover:underline">
+                                            srihari2909@gmail.com
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section - UPDATED WITH ALL LINKEDIN EXPERIENCE -->
+    <section id="experience" class="py-16 md:py-24 bg-gray-900/30">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 section-title">Work Experience</h2>
+                <p class="text-xl text-gray-400 mb-12 max-w-3xl">
+                    Comprehensive professional journey combining leadership, technical roles, and entrepreneurial experience
+                </p>
+                
+                <!-- Experience Timeline -->
+                <div class="space-y-8">
+                    <!-- Current Leadership Roles -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-bold mb-6 text-primary flex items-center">
+                            <i class="fas fa-crown mr-3"></i> Current Leadership Roles
+                        </h3>
+                        
+                        <!-- Vice President Role -->
+                        <div class="experience-card rounded-xl p-6 mb-6 leadership-role animate-slide-up">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                <div class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm font-semibold mb-2 md:mb-0">
+                                    Jul 2025 - Present · 6 mos
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-purple-400 font-semibold mr-3">On-site</span>
+                                    <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-semibold">Current</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Vice President</h3>
+                            <div class="text-primary font-semibold mb-1 flex items-center">
+                                <i class="fas fa-building mr-2"></i> Crescent Innovation and Startup Club
+                            </div>
+                            <div class="text-gray-400 text-sm mb-4 flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2"></i> Chennai, Tamil Nadu, India
+                            </div>
+                            <div class="mb-6">
+                                <p class="text-gray-300 mb-4">
+                                    Leading innovation initiatives and startup development at the university level, fostering entrepreneurship 
+                                    and technological innovation among students.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800">
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Leadership</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Innovation</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Startup Ecosystem</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Team Management</span>
+                            </div>
+                        </div>
+                        
+                        <!-- CEO Role -->
+                        <div class="experience-card rounded-xl p-6 leadership-role animate-slide-up" style="animation-delay: 0.1s">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                <div class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm font-semibold mb-2 md:mb-0">
+                                    Jan 2024 - Present · 2 yrs
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-purple-400 font-semibold mr-3">On-site</span>
+                                    <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-semibold">Current</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Chief Executive Officer</h3>
+                            <div class="text-primary font-semibold mb-1 flex items-center">
+                                <i class="fas fa-briefcase mr-2"></i> Velsy Media
+                            </div>
+                            <div class="text-gray-400 text-sm mb-4 flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2"></i> Chennai, Tamil Nadu, India
+                            </div>
+                            <div class="mb-6">
+                                <p class="text-gray-300 mb-4">
+                                    Leading strategic direction, operations, and growth initiatives for a media company focused on 
+                                    innovative content creation and digital solutions.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800">
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Entrepreneurship</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Strategy</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Business Development</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Media Management</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Internships & Technical Roles -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-bold mb-6 text-primary flex items-center">
+                            <i class="fas fa-laptop-code mr-3"></i> Internships & Technical Roles
+                        </h3>
+                        
+                        <!-- Sales Intern at QodeNext -->
+                        <div class="experience-card rounded-xl p-6 mb-6 internship-role animate-slide-up" style="animation-delay: 0.2s">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                <div class="inline-block px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm font-semibold mb-2 md:mb-0">
+                                    Jun 2025 - Aug 2025 · 3 mos
+                                </div>
+                                <span class="text-yellow-400 font-semibold">On-site</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Sales Intern</h3>
+                            <div class="text-primary font-semibold mb-1 flex items-center">
+                                <i class="fas fa-chart-line mr-2"></i> QodeNext
+                            </div>
+                            <div class="text-gray-400 text-sm mb-4 flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2"></i> Chennai, Tamil Nadu, India
+                            </div>
+                            <div class="mb-6">
+                                <p class="text-gray-300 mb-4">
+                                    Specialized in IoT-enabled computer vision solutions for AI-driven retail planogram and smart automation projects.
+                                </p>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                        <span>Spearheading the development and integration of IoT-enabled computer vision solutions tailored for AI-driven retail planogram</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                        <span>Contributing to smart automation projects, such as automated checkout and real-time shelf monitoring</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                        <span>Collaborating with software and hardware teams to design and deploy intelligent systems</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                        <span>Utilizing machine learning models and sensor networks to streamline inventory management</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800">
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">IoT</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Computer Vision</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Retail Automation</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Machine Learning</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Sales Engineering</span>
+                            </div>
+                        </div>
+                        
+                        <!-- IoT Intern at RineX.Ai -->
+                        <div class="experience-card rounded-xl p-6 mb-6 internship-role animate-slide-up" style="animation-delay: 0.3s">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                <div class="inline-block px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm font-semibold mb-2 md:mb-0">
+                                    Sep 2024 - Oct 2024 · 2 mos
+                                </div>
+                                <span class="text-yellow-400 font-semibold">Remote</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">IoT Intern</h3>
+                            <div class="text-primary font-semibold mb-1 flex items-center">
+                                <i class="fas fa-microchip mr-2"></i> RineX.Ai
+                            </div>
+                            <div class="text-gray-400 text-sm mb-4 flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2"></i> Chennai, Tamil Nadu, India
+                            </div>
+                            <div class="mb-6">
+                                <p class="text-gray-300 mb-4">
+                                    Developed and prototyped IoT-based solutions with focus on device integration and data analysis.
+                                </p>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                        <span>Assisted in developing and prototyping IoT-based solutions</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                        <span>Hands-on involvement in device integration, data collection, and performance analysis</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                        <span>Collaborated with project teams to create and test real-world applications for smart systems</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800">
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">IoT Development</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Prototyping</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Device Integration</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Data Analysis</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Electrical Technician -->
+                        <div class="experience-card rounded-xl p-6 internship-role animate-slide-up" style="animation-delay: 0.4s">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                <div class="inline-block px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm font-semibold mb-2 md:mb-0">
+                                    Jun 2024 - Jul 2024 · 2 mos
+                                </div>
+                                <span class="text-yellow-400 font-semibold">On-site</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Electrical Technician</h3>
+                            <div class="text-primary font-semibold mb-1 flex items-center">
+                                <i class="fas fa-bolt mr-2"></i> Firefly Battery Charger
+                            </div>
+                            <div class="text-gray-400 text-sm mb-4 flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2"></i> Saidapet, Chennai, India
+                            </div>
+                            <div class="mb-6">
+                                <p class="text-gray-300 mb-4">
+                                    Performed electrical testing and managed laboratory operations with technical expertise.
+                                </p>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                        <span>Adapted quickly to new laboratory techniques for various electrical testing projects</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                                        <span>Managed inventory for uninterrupted laboratory operations</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800">
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Electrical Testing</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Laboratory Management</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Inventory Management</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Technical Operations</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Research Experience -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-primary flex items-center">
+                            <i class="fas fa-flask mr-3"></i> Research Experience
+                        </h3>
+                        
+                        <!-- Research Scholar -->
+                        <div class="experience-card rounded-xl p-6 research-role animate-slide-up" style="animation-delay: 0.5s">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                <div class="inline-block px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm font-semibold mb-2 md:mb-0">
+                                    Apr 2019 - May 2023 · 4 yrs 2 mos
+                                </div>
+                                <span class="text-pink-400 font-semibold">On-site</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">
+                                        National space Settlement Contest state winner 
+                                        National Space Society</h3>
+                            <div class="text-primary font-semibold mb-1 flex items-center">
+                                <i class="fas fa-rocket mr-2"></i> National Space Society
+                            </div>
+                            <div class="text-gray-400 text-sm mb-4 flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2"></i> Washington, United States
+                            </div>
+                            <div class="mb-6">
+                                <p class="text-gray-300 mb-4">
+                                    Conducted research in space-related technologies and contributed to scientific projects 
+                                    at an internationally recognized space society.
+                                </p>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-pink-400 mt-1 mr-3"></i>
+                                        <span>Conducted research in space technology and related scientific domains</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-pink-400 mt-1 mr-3"></i>
+                                        <span>Contributed to research papers and scientific publications</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-pink-400 mt-1 mr-3"></i>
+                                        <span>Participated in space research initiatives and collaborative projects</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800">
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Research Methodology</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Space Technology</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Scientific Writing</span>
+                                <span class="px-3 py-1 skill-tag rounded-full text-xs">Project Collaboration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience Summary -->
+                <div class="mt-16 animate-slide-up" style="animation-delay: 0.6s">
+                    <h3 class="text-2xl font-bold mb-6 text-primary">Experience Summary</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                        <div class="bg-gray-900/30 rounded-lg p-6 text-center">
+                            <div class="text-4xl text-primary mb-4">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">2 Leadership Roles</h4>
+                            <p class="text-sm text-gray-400">VP & CEO positions</p>
+                        </div>
+                        <div class="bg-gray-900/30 rounded-lg p-6 text-center">
+                            <div class="text-4xl text-primary mb-4">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">3 Technical Internships</h4>
+                            <p class="text-sm text-gray-400">IoT, retail tech, electrical</p>
+                        </div>
+                        <div class="bg-gray-900/30 rounded-lg p-6 text-center">
+                            <div class="text-4xl text-primary mb-4">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">4+ Years Research</h4>
+                            <p class="text-sm text-gray-400">Space technology</p>
+                        </div>
+                        <div class="bg-gray-900/30 rounded-lg p-6 text-center">
+                            <div class="text-4xl text-primary mb-4">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">6 Total Roles</h4>
+                            <p class="text-sm text-gray-400">Diverse experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 md:py-24">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 section-title">Technical Skills</h2>
+                <p class="text-xl text-gray-400 mb-12 max-w-3xl">
+                    Specialized expertise in electrical systems, IoT development, and renewable energy solutions
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Electrical Systems -->
+                    <div class="bg-gray-900/50 rounded-xl p-6 border border-gray-800 card-hover animate-slide-up">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mr-4">
+                                <i class="fas fa-bolt text-primary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Electrical Systems</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Electrical Problem Identification
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Current Flow Measurement
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Power & Performance Testing
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Circuit Analysis & Troubleshooting
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Battery Systems & Chargers
+                            </li>
+                        </ul>
+                        <div class="mt-6 pt-6 border-t border-gray-800">
+                            <div class="text-sm text-gray-400">Proficiency Level</div>
+                            <div class="text-xs text-gray-500 mb-1">Professional & Academic</div>
+                            <div class="w-full bg-gray-800 rounded-full h-2.5 mt-2">
+                                <div class="bg-primary h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- IoT & Embedded Systems -->
+                    <div class="bg-gray-900/50 rounded-xl p-6 border border-gray-800 card-hover animate-slide-up" style="animation-delay: 0.2s">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mr-4">
+                                <i class="fas fa-microchip text-primary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">IoT & Embedded Systems</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                IoT Device Integration
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Sensor Data Collection & Analysis
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Nordic RF24L01 Wireless Communication
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Home Automation Systems
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Prototype Development
+                            </li>
+                        </ul>
+                        <div class="mt-6 pt-6 border-t border-gray-800">
+                            <div class="text-sm text-gray-400">Proficiency Level</div>
+                            <div class="text-xs text-gray-500 mb-1">Internship & Project Experience</div>
+                            <div class="w-full bg-gray-800 rounded-full h-2.5 mt-2">
+                                <div class="bg-primary h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Renewable Energy -->
+                    <div class="bg-gray-900/50 rounded-xl p-6 border border-gray-800 card-hover animate-slide-up" style="animation-delay: 0.4s">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mr-4">
+                                <i class="fas fa-solar-panel text-primary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Renewable Energy</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Solar Power Inverters
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Aquaponics System Design
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Power Management
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                RO Water Filtration Systems
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-check text-primary mr-3"></i>
+                                Sustainable Energy Solutions
+                            </li>
+                        </ul>
+                        <div class="mt-6 pt-6 border-t border-gray-800">
+                            <div class="text-sm text-gray-400">Proficiency Level</div>
+                            <div class="text-xs text-gray-500 mb-1">Project Implementation</div>
+                            <div class="w-full bg-gray-800 rounded-full h-2.5 mt-2">
+                                <div class="bg-primary h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Skills -->
+                <div class="mt-12 animate-slide-up" style="animation-delay: 0.6s">
+                    <h3 class="text-2xl font-bold mb-6 text-primary">Additional Technical Skills</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-gray-900/30 rounded-lg p-4 text-center">
+                            <div class="text-primary font-bold mb-2">PCB Design</div>
+                            <div class="text-sm text-gray-400">Custom Board Design</div>
+                            <div class="text-xs text-gray-500 mt-1">UDEMY Certified</div>
+                        </div>
+                        <div class="bg-gray-900/30 rounded-lg p-4 text-center">
+                            <div class="text-primary font-bold mb-2">Computer Vision</div>
+                            <div class="text-sm text-gray-400">Retail Applications</div>
+                            <div class="text-xs text-gray-500 mt-1">IoT-enabled</div>
+                        </div>
+                        <div class="bg-gray-900/30 rounded-lg p-4 text-center">
+                            <div class="text-primary font-bold mb-2">Data Analysis</div>
+                            <div class="text-sm text-gray-400">Sensor Data Processing</div>
+                            <div class="text-xs text-gray-500 mt-1">Performance Metrics</div>
+                        </div>
+                        <div class="bg-gray-900/30 rounded-lg p-4 text-center">
+                            <div class="text-primary font-bold mb-2">Inventory Mgmt.</div>
+                            <div class="text-sm text-gray-400">Lab Operations</div>
+                            <div class="text-xs text-gray-500 mt-1">Supply Management</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section - PRESERVED FROM PREVIOUS WEBSITE -->
+    <section id="projects" class="py-16 md:py-24 bg-gray-900/30">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 section-title">FEATURED WORK & PROJECTS</h2>
+                        <p class="text-xl text-gray-400 mb-12 max-w-3xl">
+                            A curated collection of my most impactful projects demonstrating practical application of knowledge
+                        </p>
+                    </div>
+                    <a href="#contact" class="section-cta inline-flex items-center gap-2 px-6 py-3 bg-transparent text-primary border-2 border-primary rounded-full font-semibold hover:bg-primary hover:text-black transition-all duration-300 no-print">
+                        Start a Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="project-categories grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="project-category bg-gray-900/50 rounded-xl p-6 border border-gray-800 card-hover animate-slide-up">
+                        <div class="category-number text-5xl font-bold text-primary/20 mb-4">01</div>
+                        <h3 class="text-xl font-bold mb-4">ENERGY SYSTEMS</h3>
+                        <p class="text-gray-400 mb-6">Innovative power solutions and renewable energy projects</p>
+                        <ul class="project-list space-y-3">
+                            <li class="flex items-start text-gray-300">
+                                <i class="fas fa-arrow-right text-primary mt-1 mr-3"></i>
+                                <span>Solar Power Inverter Design</span>
+                            </li>
+                            <li class="flex items-start text-gray-300">
+                                <i class="fas fa-arrow-right text-primary mt-1 mr-3"></i>
+                                <span>Solar Power Aquaponics Setup</span>
+                            </li>
+                            <li class="flex items-start text-gray-300">
+                                <i class="fas fa-arrow-right text-primary mt-1 mr-3"></i>
+                                <span>Power Management Systems</span>
+                            </li>
+                            <li class="flex items-start text-gray-300">
+                                <i class="fas fa-arrow-right text-primary mt-1 mr-3"></i>
+                                <span>Battery Charger Systems</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-category bg-gray-900/50 rounded-xl p-6 border border-gray-800 card-hover animate-slide-up" style="animation-delay: 0.2s">
+                        <div class="category-number text-5xl font-bold text-primary/20 mb-4">02</div>
+                        <h3 class="text-xl font-bold mb-4">SMART AUTOMATION</h3>
+                        <p class="text-gray-400 mb-6">IoT and automation projects for modern living</p>
+                        <ul class="project-list space-y-3">
+                            <li class="flex items-start text-gray-300">
+                                <i class="fas fa-arrow-right text-primary mt-1 mr-3"></i>
+                                <span>Home Automation System</span>
+                            </li>
+                            <li class="flex items-start text-gray-300">
+                                <i class="fas fa-arrow-right text-primary mt-1 mr-3"></i>
+                                <span>Wireless Communication using Nordic RF24L01</span>
+                            </li>
+                            <li class="flex items-start text-gray-300">
+                                <i class="fas fa-arrow-right text-primary mt-1 mr-3"></i>
+                                <span>IoT-Based Monitoring Systems</span>
+                            </li>
+                            <li class="flex items-start text-gray-300">
+                                <i class="fas fa-arrow-right text-primary mt-1 mr-3"></i>
+                                <span>Smart Device Integration</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-category bg-gray-900/50 rounded-xl p-6 border border-gray-800 card-hover animate-slide-up" style="animation-delay: 0.4s">
+                        <div class="category-number text-5xl font-bold text-primary/20 mb-4">03</div>
+                        <h3 class="text-xl font-bold mb-4">SUSTAINABILITY SOLUTIONS</h3>
+                        <p class="text-gray-400 mb-6">Environmental and resource management projects</p>
+                        <ul class="project-list space-y-3">
+                            <li class="flex items-start text-gray-300">
+                                <i class="fas fa-arrow-right text-primary mt-1 mr-3"></i>
+                                <span>RO Waste Water Filtering System</span>
+                            </li>
+                            <li class="flex items-start text-gray-300">
+                                <i class="fas fa-arrow-right text-primary mt-1 mr-3"></i>
+                                <span>Water Conservation Systems</span>
+                            </li>
+                            <li class="flex items-start text-gray-300">
+                                <i class="fas fa-arrow-right text-primary mt-1 mr-3"></i>
+                                <span>Energy Efficient Designs</span>
+                            </li>
+                            <li class="flex items-start text-gray-300">
+                                <i class="fas fa-arrow-right text-primary mt-1 mr-3"></i>
+                                <span>Sustainable Agriculture Setup</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Project Gallery -->
+                <div class="mt-16 animate-slide-up" style="animation-delay: 0.6s">
+                    <h3 class="text-2xl font-bold mb-6 text-primary">Project Gallery</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-gray-900/30 rounded-lg p-4 text-center">
+                            <div class="text-4xl text-primary mb-4">
+                                <i class="fas fa-solar-panel"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">Solar Power Systems</h4>
+                            <p class="text-sm text-gray-400">Design and implementation of solar energy solutions</p>
+                        </div>
+                        <div class="bg-gray-900/30 rounded-lg p-4 text-center">
+                            <div class="text-4xl text-primary mb-4">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">Home Automation</h4>
+                            <p class="text-sm text-gray-400">Smart home control and monitoring systems</p>
+                        </div>
+                        <div class="bg-gray-900/30 rounded-lg p-4 text-center">
+                            <div class="text-4xl text-primary mb-4">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">Water Management</h4>
+                            <p class="text-sm text-gray-400">Filtration and conservation systems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 md:py-24">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 section-title">EDUCATION</h2>
+                <p class="text-xl text-gray-400 mb-12 max-w-3xl">
+                    Academic background and technical training
+                </p>
+                
+                <div class="education-grid grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="education-card bg-gray-900/50 rounded-xl p-6 border-t-4 border-primary animate-slide-up">
+                        <div class="card-content">
+                            <div class="timeline-date inline-block px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-semibold mb-3">
+                                Expected 01/2027
+                            </div>
+                            <div class="degree text-xl font-bold text-white mb-2">Bachelor of Technology</div>
+                            <div class="institution text-primary font-semibold mb-4">BSA Crescent Institute of Science and Technology</div>
+                            <p class="text-gray-300 mt-4">Specializing in Electrical and IoT technologies with focus on practical applications</p>
+                        </div>
+                    </div>
+                    
+                    <div class="education-card bg-gray-900/50 rounded-xl p-6 border-t-4 border-primary animate-slide-up" style="animation-delay: 0.2s">
+                        <div class="card-content">
+                            <div class="timeline-date inline-block px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-semibold mb-3">
+                                01/2023
+                            </div>
+                            <div class="degree text-xl font-bold text-white mb-2">Senior Secondary School</div>
+                            <div class="institution text-primary font-semibold mb-4">Sri Chaitanya Senior Secondary School</div>
+                            <p class="text-gray-300 mt-4">Chennai, Tamil Nadu, India</p>
+                            <p class="text-gray-500 text-sm mt-2">Strong foundation in science and mathematics</p>
+                        </div>
+                    </div>
+                    
+                    <div class="education-card bg-gray-900/50 rounded-xl p-6 border-t-4 border-primary animate-slide-up" style="animation-delay: 0.4s">
+                        <div class="card-content">
+                            <div class="timeline-date inline-block px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-semibold mb-3">
+                                Completed
+                            </div>
+                            <div class="degree text-xl font-bold text-white mb-2">Secondary School</div>
+                            <div class="institution text-primary font-semibold mb-4">Sri Chaitanya Secondary School</div>
+                            <p class="text-gray-300 mt-4">Chennai, Tamil Nadu, India</p>
+                            <p class="text-gray-500 text-sm mt-2">Early interest in technical and scientific subjects</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-16 md:py-24 bg-gray-900/30">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 section-title">CERTIFICATIONS</h2>
+                <p class="text-xl text-gray-400 mb-12 max-w-3xl">
+                    Professional certifications and specialized training
+                </p>
+                
+                <div class="cert-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="cert-card bg-gray-900/50 rounded-xl p-6 border border-primary/20 animate-slide-up">
+                        <div class="card-content">
+                            <h3 class="text-xl font-bold mb-3">Internet of Things & Robotics</h3>
+                            <p class="text-gray-300 mb-4">Comprehensive training in IoT systems, robotics integration, embedded programming, and sensor networks with practical project implementation</p>
+                            <div class="company text-primary font-semibold">RINEX</div>
+                            <div class="cert-year text-primary font-semibold mt-2">2024</div>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-card bg-gray-900/50 rounded-xl p-6 border border-primary/20 animate-slide-up" style="animation-delay: 0.2s">
+                        <div class="card-content">
+                            <h3 class="text-xl font-bold mb-3">PCB Design & Fabrication</h3>
+                            <p class="text-gray-300 mb-4">Complete training in designing custom printed circuit boards, schematic design, layout optimization, and fabrication processes</p>
+                            <div class="company text-primary font-semibold">UDEMY</div>
+                            <div class="cert-year text-primary font-semibold mt-2">Completed</div>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-card bg-gray-900/50 rounded-xl p-6 border border-primary/20 animate-slide-up" style="animation-delay: 0.4s">
+                        <div class="card-content">
+                            <h3 class="text-xl font-bold mb-3">Internship Completion Certificate</h3>
+                            <p class="text-gray-300 mb-4">Successfully completed IoT internship at RineX.Ai with hands-on experience in device integration and IoT solution development</p>
+                            <div class="company text-primary font-semibold">RineX.Ai</div>
+                            <div class="cert-year text-primary font-semibold mt-2">2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 relative">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+        
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="section-header flex flex-col md:flex-row justify-between items-center mb-12">
+                    <div class="section-title-wrapper">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 section-title">LET'S COLLABORATE</h2>
+                        <p class="text-xl text-gray-400 max-w-3xl">
+                            Open to opportunities in IoT development, electrical systems, and innovative projects. Let's create something amazing together!
+                        </p>
+                    </div>
+                </div>
+                
+                <a href="mailto:srihari2909@gmail.com" class="btn inline-flex items-center gap-2 px-6 py-3 bg-transparent text-primary border-2 border-primary rounded-full font-semibold hover:bg-primary hover:text-black transition-all duration-300 mb-8">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </a>
+                
+                <div class="social-links flex flex-wrap justify-center gap-6 mt-8">
+                    <a href="https://sriharikrishnansrinivasan.github.io/" class="social-link flex items-center gap-2 px-6 py-3 bg-gray-900/50 text-white rounded-full hover:bg-gray-800 transition-colors" target="_blank">
+                        <i class="fas fa-globe"></i> Project Portfolio Website
+                    </a>
+                    <a href="https://github.com/sriharikrishnansrinivasan" class="social-link flex items-center gap-2 px-6 py-3 bg-gray-900/50 text-white rounded-full hover:bg-gray-800 transition-colors" target="_blank">
+                        <i class="fab fa-github"></i> GitHub Profile
+                    </a>
+                    <a href="mailto:srihari2909@gmail.com" class="social-link flex items-center gap-2 px-6 py-3 bg-gray-900/50 text-white rounded-full hover:bg-gray-800 transition-colors">
+                        <i class="fas fa-envelope"></i> Email Me
+                    </a>
+                    <a href="https://www.linkedin.com/in/srihari-krishnan-178372247/" class="social-link flex items-center gap-2 px-6 py-3 bg-gray-900/50 text-white rounded-full hover:bg-gray-800 transition-colors" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+                
+                <p class="mt-12 text-gray-400 max-w-2xl mx-auto text-center">
+                    With hands-on experience in IoT and electrical systems. 
+                    Available for internships, collaborative projects, research opportunities, and freelance work.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-6xl mx-auto">
+                <p class="text-center text-gray-500">&copy; 2024 Srihari Krishnan Srinivasan. All rights reserved.</p>
+                <p class="mt-2 text-center text-gray-500 text-sm">
+                    projects Portfolio: 
+                    <a href="https://sriharikrishnansrinivasan.github.io/" class="text-primary hover:underline" target="_blank">
+                        sriharikrishnansrinivasan.github.io
+                    </a>
+                    | 
+                    <a href="#hero" class="text-primary hover:underline">Back to Top ↑</a>
+                    |
+                    <a href="mailto:srihari2909@gmail.com" class="text-primary hover:underline">Get in Touch</a>
+                </p>
+                <p class="mt-4 text-center text-gray-600 text-sm">
+                    
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // DOM Elements
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const scrollDots = document.querySelectorAll('.scroll-dot');
+        const sections = document.querySelectorAll('section');
+        const downloadResumeBtn = document.getElementById('download-resume');
+
+        // Theme Toggle
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('light-theme');
+            
+            if (document.documentElement.classList.contains('light-theme')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                document.body.style.backgroundColor = '#f8fafc';
+                document.body.style.color = '#1f2937';
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                document.body.style.backgroundColor = '#0a0a0a';
+                document.body.style.color = '#f0f0f0';
+            }
+        });
+
+        // Scroll Indicator
+        function updateActiveDot() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if(window.scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            scrollDots.forEach(dot => {
+                dot.classList.remove('active');
+                if(dot.getAttribute('data-section') === current) {
+                    dot.classList.add('active');
+                }
+            });
+        }
+
+        // Dot click navigation
+        scrollDots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const sectionId = this.getAttribute('data-section');
+                const section = document.getElementById(sectionId);
+                if(section) {
+                    window.scrollTo({
+                        top: section.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Download Resume
+        downloadResumeBtn.addEventListener('click', () => {
+            const resumeContent = `SRIHARI KRISHNAN SRINIVASAN - COMPREHENSIVE PORTFOLIO RESUME
+================================================================
+
+CONTACT INFORMATION
+-------------------
+Portfolio: https://sriharikrishnansrinivasan.github.io/
+LinkedIn: https://www.linkedin.com/in/srihari-krishnan-178372247/
+Email: srihari2909@gmail.com
+Location: Chennai, Tamil Nadu, India
+
+PROFESSIONAL SUMMARY
+--------------------
+Reliable Technician with solid foundation in identifying electrical problems and measuring current flow. 
+Performs tests to determine power and performance. Dedicated to resolving issues and integrating smooth operations.
+Currently serving as Vice President at Crescent Innovation and Startup Club with expertise in IoT, 
+computer vision, and renewable energy systems.
+
+COMPLETE WORK EXPERIENCE
+------------------------
+
+1. VICE PRESIDENT - Crescent Innovation and Startup Club
+   July 2025 - Present | Chennai, Tamil Nadu, India (On-site)
+   • Leading innovation initiatives and startup development at university level
+   • Fostering entrepreneurship and technological innovation among students
+
+2. CHIEF EXECUTIVE OFFICER - Velsy Media
+   January 2024 - Present | Chennai, Tamil Nadu, India (On-site)
+   • Leading strategic direction, operations, and growth initiatives
+   • Managing media company focused on innovative content creation
+
+3. SALES INTERN - QodeNext
+   June 2025 - August 2025 | Chennai, Tamil Nadu, India (On-site)
+   • Spearheaded development of IoT-enabled computer vision solutions for AI-driven retail planogram
+   • Contributed to smart automation projects (automated checkout, real-time shelf monitoring)
+   • Collaborated with software/hardware teams to deploy intelligent systems
+   • Utilized machine learning models and sensor networks for inventory management
+
+4. IoT INTERN - RineX.Ai
+   September 2024 - October 2024 | Chennai, Tamil Nadu, India (Remote)
+   • Assisted in developing and prototyping IoT-based solutions
+   • Hands-on involvement in device integration, data collection, and performance analysis
+   • Collaborated with teams to create and test real-world applications for smart systems
+
+5. ELECTRICAL TECHNICIAN - Firefly Battery Charger
+   June 2024 - July 2024 | Saidapet, Chennai, India (On-site)
+   • Adapted quickly to new laboratory techniques for electrical testing projects
+   • Managed inventory for uninterrupted laboratory operations
+
+6. RESEARCH SCHOLAR - National Space Society
+   April 2019 - May 2023 | Washington, United States (On-site)
+   • Conducted research in space technology and related scientific domains
+   • Contributed to research papers and scientific publications
+
+PERSONAL PROJECTS
+-----------------
+• Solar Power Inverter Design
+• Home Automation System
+• Wireless Communication using Nordic RF24L01
+• IoT, Solar Power Aquaponics Setup
+• RO Waste Water Filtering System
+• Power Management Systems
+• Battery Charger Systems
+• IoT-Based Monitoring Systems
+• Water Conservation Systems
+• Energy Efficient Designs
+
+TECHNICAL SKILLS
+----------------
+ELECTRICAL SYSTEMS:
+• Electrical Problem Identification
+• Current Flow Measurement
+• Power & Performance Testing
+• Circuit Analysis & Troubleshooting
+• Battery Systems & Chargers
+
+IoT & EMBEDDED SYSTEMS:
+• IoT Device Integration
+• Sensor Data Collection & Analysis
+• Nordic RF24L01 Wireless Communication
+• Home Automation Systems
+• Prototype Development
+
+RENEWABLE ENERGY:
+• Solar Power Inverters
+• Aquaponics System Design
+• Power Management
+• RO Water Filtration Systems
+• Sustainable Energy Solutions
+
+ADDITIONAL SKILLS:
+• PCB Design (UDEMY Certified)
+• Computer Vision for Retail
+• Data Analysis & Performance Metrics
+• Inventory Management
+• Research Methodology
+
+EDUCATION
+---------
+Expected 01/2027
+Bachelor of Technology, BSA Crescent Institute of Science and Technology
+
+
+01/2023
+Senior Secondary School, Sri Chaitanya Senior Secondary School, Chennai
+
+Secondary School, Sri Chaitanya Secondary School, Chennai
+
+CERTIFICATIONS
+--------------
+• Internet of Things & Robotics, RINEX, 2024
+• PCB Design & Fabrication, UDEMY
+• Internship Completion Certificate, RineX.Ai, 2024
+
+---
+Last Updated: ${new Date().toLocaleDateString()}
+Portfolio: https://sriharikrishnansrinivasan.github.io/
+LinkedIn: https://www.linkedin.com/in/srihari-krishnan-178372247/`;
+            
+            const blob = new Blob([resumeContent], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Srihari_Krishnan_Srinivasan_Resume.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            alert('Comprehensive resume downloaded successfully!');
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Image error handling
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('error', function() {
+                this.src = 'https://via.placeholder.com/300x365/0a0a0a/00d9ff?text=Srihari+Krishnan';
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-hover, .animate-slide-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Initialize scroll functionality
+        window.addEventListener('scroll', updateActiveDot);
+        window.addEventListener('load', updateActiveDot);
+    </script>
+</body>
+</html>
